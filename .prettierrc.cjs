@@ -1,0 +1,26 @@
+module.exports = {
+    trailingComma: 'all',
+    tabWidth: 4,
+    printWidth: 80,
+    semi: true,
+    singleQuote: true,
+    plugins: [
+        '@trivago/prettier-plugin-sort-imports',
+        'prettier-plugin-tailwindcss',
+    ],
+    importOrder: [
+        '^@providers',
+        '^@hooks',
+        '^@services',
+        '^@models',
+        '^@stores',
+        '^@components',
+        '^@ui',
+        '^@utilities',
+        '^[./]',
+    ],
+    importOrderSeparation: true,
+    importOrderSortSpecifiers: true,
+    tailwindFunctions: ['cn'],
+    pluginSearchDirs: false,
+};

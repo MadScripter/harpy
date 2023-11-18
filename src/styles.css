@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+@layer base {
+    :root,
+    #root,
+    body,
+    html {
+        @apply h-full w-full overflow-hidden;
+    }
+
+    body {
+        font-feature-settings:
+            'rlig' 1,
+            'calt' 1;
+    }
+
+    #app-background {
+        @apply absolute bottom-0 h-full w-full;
+        background-image: url('/graphics.png');
+        background-size: 100% auto;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
+}
